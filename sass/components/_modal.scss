@@ -34,7 +34,6 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .modal-close-button {
     position: absolute;
     right: 8px;
@@ -51,17 +50,10 @@
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
+    &:hover {
+        fill: var(--accent-color);
+        }
 }
-
-/* .close-icon:hover,
-.close-icon:focus {
-    background-color: var(--accent-color);
-} */
-
-.modal-close-button:hover {
-    fill: var(--accent-color);
-}
-
 
 /* ----------------------Форма в модальному вікні------------ */
 
@@ -74,7 +66,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-
 }
 
 input {
@@ -100,6 +91,9 @@ label {
 .form-control {
     position: relative;
     margin-bottom: 10px;
+    &:focus-within .form-icon {
+      fill: var(--accent-color);
+        }
 }
 
 .form-input {
@@ -112,10 +106,9 @@ label {
     cursor: pointer;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus {
-    border-color: var(--accent-color);
+    &:focus {
+      border-color: var(--accent-color);
+        }
 }
 
 .form-icon {
@@ -128,20 +121,9 @@ label {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.form-control:focus-within .form-icon {
-    fill: var(--accent-color);
-}
-
-/* .form-input:focus .form-icon
- {
-    fill: var(--accent-color);
-} */
-
 textarea {
     padding: 12px 16px;
-
 }
-
 
 .form-commet {
     width: 100%;
@@ -152,20 +134,17 @@ textarea {
     cursor: pointer;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+        }
+    &:focus {
+        border-color: #2196f3;
+                }
 }
-
-.form-commet::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-
-}
-
-.form-commet:focus {
-    border-color: #2196f3;
-}
-
 
 .form-button {
     display: block;
@@ -179,13 +158,13 @@ textarea {
     border: none;
     border-radius: 4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-button:hover,
-.form-button:focus {
+&:hover,
+&:focus {
     background-color: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
 }
+
 
 .button-submit-title {
     font-weight: 700;
@@ -212,6 +191,19 @@ textarea {
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
+
+&:checked + .checkbox-chec-markr {
+    background-position: center;
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url('../images/checkmark.svg');
+    background-size: contain;
+    background-origin: border-box;
+        }
+&:hover + .checkbox-chec-markr {
+    border-color: var(--accent-color);
+    cursor: pointer;
+        }
 }
 
 .checkbox-chec-markr {
@@ -223,20 +215,6 @@ textarea {
     border-radius: 2px;
     margin-right: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox-input:checked+.checkbox-chec-markr {
-    background-position: center;
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-    background-image: url('../images/checkmark.svg');
-    background-size: contain;
-    background-origin: border-box;
-}
-
-.checkbox-input:hover+.checkbox-chec-markr {
-    border-color: var(--accent-color);
-    cursor: pointer;
 }
 
 .checkbox-link {

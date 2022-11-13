@@ -13,22 +13,18 @@
     align-items: baseline;
 }
 
-
 .footer__left {
     margin-right: 70px;
 }
-
 
 .footer__logo {
     display: block;
     margin-bottom: 20px;
 }
 
-
 .logo__second-part--footer {
     color: var(--title-white-color);
 }
-
 
 .address__item:not(:last-child) {
     margin-bottom: 9px;
@@ -41,16 +37,15 @@
     color: var(--title-white-color);
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        }
+    &--contacts {
+        color: rgba(255, 255, 255, 0.6);
+                }
 }
 
-.address__link:hover,
-.address__link:focus {
-    color: var(--accent-color);
-}
-
-.address__link--contacts {
-    color: rgba(255, 255, 255, 0.6);
-}
 
 .footer-social-block {
     margin-right: 93px;
@@ -73,11 +68,11 @@
 .social-icon-item {
     width: 44px;
     height: 44px;
+    &:not(:last-child) {
+        margin-right: 10px;
+        }
 }
 
-.social-icon-item:not(:last-child) {
-    margin-right: 10px;
-}
 
 .social-icon-link {
     display: flex;
@@ -91,12 +86,10 @@
     color: var(--title-white-color);
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-icon-link:hover,
-.social-icon-link:focus {
-    background-color: var(--accent-color);
-    /* fill: var(--title-white-color);   */
+    &:hover,
+    &:focus {
+            background-color: var(--accent-color);
+        }
 }
 
 .social-icon {
@@ -139,10 +132,9 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
-}
-
-.subscribe-email::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
 }
 
 .subscribe-send-btn {
@@ -161,11 +153,10 @@
     color: var(--title-white-color);
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.subscribe-send-btn:hover,
-.subscribe-send-btn:focus {
-    background-color: var(--button-color);
+    &:hover,
+    &:focus {
+        background-color: var(--button-color);
+        }
 }
 
 .subscribe-send-title {

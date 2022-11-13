@@ -11,11 +11,12 @@
 
 .card-list__item {
     width: 270px;
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
 }
 
-.card-list__item:not(:last-child) {
-    margin-right: 30px;
-}
+
 
 .card-list__link {
     margin-bottom: 30px;
